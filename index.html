@@ -3,356 +3,450 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaligama Vivek - Software Developer Portfolio</title>
+    <title>Jaligama Vivek | Software Developer</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-text">JV<span class="blink">_</span></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Jaligama Vivek</h2>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+            <a href="#home" class="nav-logo">&lt;JV /&gt;</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <a href="https://github.com/Jaligamavivek" target="_blank" class="nav-cta">GitHub</a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+        </div>
         <div class="hero-container">
-            <div class="hero-wrapper">
-                <div class="hero-image">
-                    <div class="profile-image">
-                        <img src="images/profile.jpg?v=1" alt="Jaligama Vivek" />
-                    </div>
+            <div class="hero-left">
+                <p class="hero-greeting"><i class="fas fa-terminal"></i> Hello World, I'm</p>
+                <h1 class="hero-name">Jaligama<br><span>Vivek</span></h1>
+                <div class="hero-role">
+                    <span class="role-prefix">const role = </span>
+                    <span class="typed-text" id="typedText"></span>
+                    <span class="cursor">|</span>
                 </div>
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        Hi, I'm Jaligama Vivek
-                    </h1>
-                    <p class="hero-subtitle">Software Developer & Problem Solver</p>
-                    <p class="hero-description">
-                        Passionate about end-to-end web application development and algorithmic thinking. 
-                        Strong understanding of system design, application performance, and clean code practices.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <p class="hero-desc">Software Developer passionate about building scalable web applications, solving complex problems, and writing clean, efficient code.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn-outline">Hire Me</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="mailto:vivekgupta5a58@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/jaligama-vivek-guptha-6665262b9/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Jaligamavivek" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.geeksforgeeks.org/" target="_blank" title="GeeksforGeeks"><i class="fas fa-code"></i></a>
+                    <a href="https://leetcode.com/" target="_blank" title="LeetCode"><i class="fas fa-laptop-code"></i></a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">350+</span>
+                        <span class="stat-label">Problems Solved</span>
                     </div>
-                    <div class="hero-social">
-                        <a href="mailto:vivekgupta5a58@gmail.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/jaligama-vivek-guptha-6665262b9/" class="social-link" target="_blank" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/Jaligamavivek" class="social-link" target="_blank" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">2+</span>
+                        <span class="stat-label">Projects Built</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">3</span>
+                        <span class="stat-label">Certifications</span>
                     </div>
                 </div>
             </div>
+            <div class="hero-right">
+                <div class="profile-wrapper">
+                    <div class="profile-ring"></div>
+                    <div class="profile-img">
+                        <img src="images/profile.jpg" alt="Jaligama Vivek">
+                    </div>
+                    <div class="profile-badge badge-1"><i class="fab fa-js"></i></div>
+                    <div class="profile-badge badge-2"><i class="fab fa-node-js"></i></div>
+                    <div class="profile-badge badge-3"><i class="fab fa-python"></i></div>
+                    <div class="profile-badge badge-4"><i class="fas fa-database"></i></div>
+                </div>
+            </div>
         </div>
-    </section> 
-   <!-- About Section -->
-    <section id="about" class="about">
+        <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
+            <div class="section-header">
+                <p class="section-tag">// about me</p>
+                <h2 class="section-title">Who I Am</h2>
+            </div>
+            <div class="about-grid">
                 <div class="about-text">
-                    <p>
-                        I'm a dedicated Software Developer with experience in end-to-end web application development 
-                        and algorithmic thinking. Currently pursuing B.Tech in Computer Science and Engineering 
-                        (CyberSecurity) at the Institute of Aeronautical Engineering, Hyderabad.
-                    </p>
-                    <p>
-                        With over 350 problems solved on competitive programming platforms, I demonstrate 
-                        consistent analytical skills and a passion for problem-solving. I have hands-on 
-                        experience in web development, cybersecurity, and building scalable applications.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>350+</h3>
-                            <p>Problems Solved</p>
-                        </div>
-                        <div class="stat">
-                            <h3>2+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat">
-                            <h3>5+</h3>
-                            <p>Projects Completed</p>
-                        </div>
+                    <p>I'm a <span class="highlight">Software Developer</span> currently pursuing B.Tech in Computer Science & Engineering (CyberSecurity) at the Institute of Aeronautical Engineering, Hyderabad.</p>
+                    <p>I specialize in <span class="highlight">full-stack web development</span> with a strong foundation in data structures, algorithms, and system design. I've solved 350+ problems across competitive programming platforms.</p>
+                    <p>I'm passionate about building real-world applications that solve meaningful problems, with a focus on clean code, performance, and user experience.</p>
+                    <div class="about-info">
+                        <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>Hyderabad, India</span></div>
+                        <div class="info-item"><i class="fas fa-envelope"></i><a href="mailto:vivekgupta5a58@gmail.com">vivekgupta5a58@gmail.com</a></div>
+                        <div class="info-item"><i class="fas fa-graduation-cap"></i><span>B.Tech CSE (CyberSecurity)</span></div>
+                        <div class="info-item"><i class="fas fa-briefcase"></i><span>Open to Opportunities</span></div>
                     </div>
                 </div>
                 <div class="about-education">
                     <h3>Education</h3>
-                    <div class="education-item">
-                        <h4>B.Tech in Computer Science and Engineering (CyberSecurity)</h4>
-                        <p>Institute of Aeronautical Engineering, Hyderabad</p>
-                        <span class="year">2023 - 2027</span>
-                        <p class="cgpa">CGPA: 7.66</p>
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-university"></i></div>
+                        <div class="edu-info">
+                            <h4>B.Tech - CSE (CyberSecurity)</h4>
+                            <p>Institute of Aeronautical Engineering, Hyderabad</p>
+                            <div class="edu-meta">
+                                <span class="edu-year">2023 – 2027</span>
+                                <span class="edu-grade">CGPA: 7.55</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="education-item">
-                        <h4>MPC (Mathematics, Physics, Chemistry)</h4>
-                        <p>Sri Chaitanya College Charka Bhavan</p>
-                        <span class="year">2021 - 2023</span>
-                        <p class="percentage">Percentage: 87.6%</p>
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-school"></i></div>
+                        <div class="edu-info">
+                            <h4>Intermediate - MPC</h4>
+                            <p>Sri Chaitanya College Charka Bhavan</p>
+                            <div class="edu-meta">
+                                <span class="edu-year">2021 – 2023</span>
+                                <span class="edu-grade">87.6%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-school"></i></div>
+                        <div class="edu-info">
+                            <h4>SSC</h4>
+                            <p>Jeevadan High School</p>
+                            <div class="edu-meta">
+                                <span class="edu-year">2021</span>
+                                <span class="edu-grade">CGPA: 9.3</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <!-- Experience -->
+    <section id="experience" class="experience section">
         <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
+            <div class="section-header">
+                <p class="section-tag">// experience</p>
+                <h2 class="section-title">Work Experience</h2>
+            </div>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Web Development Internship</h3>
-                        <span class="timeline-date">May 2025 - November 2025</span>
-                        <ul>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Web Development Intern</h3>
+                                <p class="timeline-company"><i class="fas fa-building"></i> Web Development Company</p>
+                            </div>
+                            <span class="timeline-date"><i class="fas fa-calendar"></i> May 2025 – Nov 2025</span>
+                        </div>
+                        <ul class="timeline-points">
                             <li>Developed responsive web pages using modern frontend practices and optimized user interactions</li>
                             <li>Assisted in debugging application issues and improving overall performance and stability</li>
                             <li>Collaborated with the development team to implement features and follow proper software workflows</li>
-                            <li>Gained practical experience in web development tools while contributing to real project tasks during the internship</li>
+                            <li>Gained practical experience in web development tools while contributing to real project tasks</li>
                         </ul>
+                        <div class="timeline-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>REST APIs</span>
+                        </div>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Cyber Security Virtual Internship</h3>
-                        <span class="timeline-date">May 2025 - May 2025</span>
-                        <ul>
-                            <li>Learned core cyber security concepts including threat analysis, vulnerability identification, and security controls</li>
-                            <li>Gained hands-on experience with cybersecurity tools used for scanning, monitoring, and incident detection</li>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Cyber Security Virtual Intern</h3>
+                                <p class="timeline-company"><i class="fas fa-building"></i> Virtual Internship Program</p>
+                            </div>
+                            <span class="timeline-date"><i class="fas fa-calendar"></i> May 2025</span>
+                        </div>
+                        <ul class="timeline-points">
+                            <li>Learned core cybersecurity concepts including threat analysis, vulnerability identification, and security controls</li>
+                            <li>Gained hands-on experience with cybersecurity tools for scanning, monitoring, and incident detection</li>
                             <li>Studied common cyber threats such as malware attacks, phishing attempts, and unauthorized access techniques</li>
                         </ul>
+                        <div class="timeline-tags">
+                            <span>CyberSecurity</span><span>Threat Analysis</span><span>Vulnerability Assessment</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- Projects -->
+    <section id="projects" class="projects section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-header">
+                <p class="section-tag">// projects</p>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>HealthBase</h3>
-                        <span class="project-date">January 2025</span>
+                <div class="project-card featured">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Jaligamavivek" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
-                    <p class="project-description">
-                        Health appointment booking system built with Node.js backend for a health appointment system with CRUD for patients, doctors, and appointments.
-                    </p>
+                    <h3>HealthBase</h3>
+                    <p class="project-subtitle">Health Appointment Booking System</p>
+                    <p class="project-desc">A full-stack health appointment booking system with CRUD operations for patients, doctors, and appointments. Features JWT authentication with role-based access control for admin, doctor, reception, and patient roles.</p>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check"></i> JWT login with role-based access</li>
+                        <li><i class="fas fa-check"></i> REST APIs using Express & lowdb</li>
+                        <li><i class="fas fa-check"></i> CRUD for patients, doctors & appointments</li>
+                    </ul>
                     <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">JWT</span>
-                        <span class="tech-tag">Express</span>
-                        <span class="tech-tag">REST API</span>
+                        <span>Node.js</span><span>Express</span><span>JWT</span><span>REST API</span><span>lowdb</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Jaligamavivek" class="project-link" target="_blank"></a>
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Coming Soon
-                        </a>
-                    </div>
+                    <span class="project-date-badge">Jan 2025</span>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>ShopSmart</h3>
-                        <span class="project-date">October 2024</span>
+                <div class="project-card featured">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-robot"></i></div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Jaligamavivek" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
-                    <p class="project-description">
-                        A shopping destination built with MERN stack featuring product, cart, order and search functionality with responsive modern UI.
-                    </p>
+                    <h3>Career Guidance Chatbot</h3>
+                    <p class="project-subtitle">AI-Based Career Recommendation System</p>
+                    <p class="project-desc">An AI-based chatbot that recommends suitable career paths based on user input. Uses NLP techniques to understand queries and generate contextual responses with an interactive interface.</p>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check"></i> NLP-powered query understanding</li>
+                        <li><i class="fas fa-check"></i> Contextual career path recommendations</li>
+                        <li><i class="fas fa-check"></i> Interactive and user-friendly interface</li>
+                    </ul>
                     <div class="project-tech">
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Express</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
+                        <span>Python</span><span>NLP</span><span>AI/ML</span><span>JavaScript</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Jaligamavivek" class="project-link" target="_blank"></a>
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Coming Soon
-                        </a>
+                    <span class="project-date-badge">Oct 2024</span>
+                </div>
+            </div>
+
+            <!-- GitHub Repos -->
+            <div class="github-section">
+                <h3><i class="fab fa-github"></i> GitHub Repositories</h3>
+                <div class="github-repos" id="githubRepos">
+                    <div class="repo-loading">
+                        <i class="fas fa-spinner fa-spin"></i> Loading repositories from GitHub...
                     </div>
+                </div>
+                <a href="https://github.com/Jaligamavivek" target="_blank" class="view-all-btn">
+                    View All Repositories <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+ 
+   <!-- Skills -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">// skills</p>
+                <h2 class="section-title">Technical Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-group">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skill-pills">
+                        <span class="pill"><i class="fab fa-java"></i> Java</span>
+                        <span class="pill"><i class="fab fa-python"></i> Python</span>
+                        <span class="pill"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="pill"><i class="fas fa-database"></i> SQL</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3><i class="fas fa-globe"></i> Web Technologies</h3>
+                    <div class="skill-pills">
+                        <span class="pill"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="pill"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="pill"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="pill"><i class="fas fa-server"></i> Express.js</span>
+                        <span class="pill"><i class="fas fa-exchange-alt"></i> REST APIs</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="skill-pills">
+                        <span class="pill"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="pill"><i class="fas fa-database"></i> PL/SQL</span>
+                        <span class="pill"><i class="fas fa-leaf"></i> MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                    <div class="skill-pills">
+                        <span class="pill"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="pill"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="pill"><i class="fas fa-code"></i> VS Code</span>
+                        <span class="pill"><i class="fas fa-shield-alt"></i> CyberSecurity</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="certs-section">
+                <h3 class="certs-title"><i class="fas fa-certificate"></i> Certifications</h3>
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-logo infosys"><i class="fas fa-globe"></i></div>
+                        <div class="cert-info">
+                            <h4>Web Development</h4>
+                            <p>Infosys SpringBoard</p>
+                            <a href="https://infyspringboard.onwingspan.com/" target="_blank" class="cert-btn">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-logo udemy"><i class="fab fa-js"></i></div>
+                        <div class="cert-info">
+                            <h4>JavaScript</h4>
+                            <p>Udemy</p>
+                            <a href="https://www.udemy.com/" target="_blank" class="cert-btn">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-logo hackerrank"><i class="fas fa-database"></i></div>
+                        <div class="cert-info">
+                            <h4>SQL (Basic)</h4>
+                            <p>HackerRank</p>
+                            <a href="https://www.hackerrank.com/" target="_blank" class="cert-btn">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coding Profiles -->
+            <div class="coding-section">
+                <h3 class="certs-title"><i class="fas fa-trophy"></i> Coding Achievements</h3>
+                <div class="coding-grid">
+                    <a href="https://www.geeksforgeeks.org/" target="_blank" class="coding-card">
+                        <div class="coding-icon gfg">GFG</div>
+                        <div class="coding-info">
+                            <h4>GeeksforGeeks</h4>
+                            <p>150+ DSA Problems</p>
+                        </div>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="https://leetcode.com/" target="_blank" class="coding-card">
+                        <div class="coding-icon lc">LC</div>
+                        <div class="coding-info">
+                            <h4>LeetCode</h4>
+                            <p>200+ Problems Solved</p>
+                        </div>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="https://www.hackerrank.com/" target="_blank" class="coding-card">
+                        <div class="coding-icon hr">HR</div>
+                        <div class="coding-info">
+                            <h4>HackerRank</h4>
+                            <p>Active Problem Solver</p>
+                        </div>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <!-- Contact -->
+    <section id="contact" class="contact section">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Java</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Web Technologies</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">REST APIs</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">HTML</span>
-                        <span class="skill-item">CSS</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">MySQL</span>
-                        <span class="skill-item">SQL</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Development Tools</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">GitHub</span>
-                        <span class="skill-item">VS Code</span>
-                    </div>
-                </div>
+            <div class="section-header">
+                <p class="section-tag">// contact</p>
+                <h2 class="section-title">Get In Touch</h2>
             </div>
-            
-            <div class="certifications">
-                <h3>Certifications</h3>
-                <div class="cert-grid">
-                    <div class="cert-item">
-                        <h4>Web Development - Infosys SpringBoard</h4>
-                        <a href="https://infyspringboard.onwingspan.com/" class="cert-link" target="_blank">Visit SpringBoard</a>
-                    </div>
-                    <div class="cert-item">
-                        <h4>JavaScript - Udemy</h4>
-                        <a href="https://www.udemy.com/" class="cert-link" target="_blank">Visit Udemy</a>
-                    </div>
-                    <div class="cert-item">
-                        <h4>SQL (Basic) - HackerRank</h4>
-                        <a href="https://www.hackerrank.com/certificates/36edae0cfd9b" class="cert-link" target="_blank">Visit HackerRank</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="achievements">
-                <h3>Coding Achievements</h3>
-                <div class="achievement-grid">
-                    <div class="achievement-item">
-                        <h4>GeeksforGeeks</h4>
-                        <p>150+ DSA problems solved</p>
-                        <a href="https://www.geeksforgeeks.org/" class="achievement-link" target="_blank">Visit GeeksforGeeks</a>
-                    </div>
-                    <div class="achievement-item">
-                        <h4>LeetCode</h4>
-                        <p>200+ problems solved</p>
-                        <a href="https://leetcode.com/" class="achievement-link" target="_blank">Visit LeetCode</a>
-                    </div>
-                    <div class="achievement-item">
-                        <h4>HackerRank</h4>
-                        <p>Active problem solver</p>
-                        <a href="https://www.hackerrank.com/" class="achievement-link" target="_blank">Visit HackerRank</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>
-                        I'm always interested in new opportunities and collaborations. 
-                        Feel free to reach out if you'd like to discuss a project or just say hello!
-                    </p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:vivekgupta5a58@gmail.com">vivekgupta5a58@gmail.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Hyderabad, India</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://www.linkedin.com/in/jaligama-vivek-guptha-6665262b9/" target="_blank">LinkedIn</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <a href="https://github.com/Jaligamavivek" target="_blank">GitHub</a>
+            <div class="contact-grid">
+                <div class="contact-left">
+                    <p class="contact-intro">I'm currently open to new opportunities. Whether you have a project in mind, a job offer, or just want to say hi — my inbox is always open!</p>
+                    <div class="contact-links">
+                        <a href="mailto:vivekgupta5a58@gmail.com" class="contact-link">
+                            <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
+                            <div><span>Email</span><p>vivekgupta5a58@gmail.com</p></div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jaligama-vivek-guptha-6665262b9/" target="_blank" class="contact-link">
+                            <div class="contact-link-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div><span>LinkedIn</span><p>jaligama-vivek-guptha</p></div>
+                        </a>
+                        <a href="https://github.com/Jaligamavivek" target="_blank" class="contact-link">
+                            <div class="contact-link-icon"><i class="fab fa-github"></i></div>
+                            <div><span>GitHub</span><p>Jaligamavivek</p></div>
+                        </a>
+                        <div class="contact-link">
+                            <div class="contact-link-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><span>Location</span><p>Hyderabad, India</p></div>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <label>Your Name</label>
+                            <input type="text" placeholder="John Doe" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <label>Your Email</label>
+                            <input type="email" placeholder="john@example.com" required>
                         </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="Project Collaboration" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Jaligama Vivek. All rights reserved.</p>
+        <div class="footer-container">
+            <div class="footer-logo">&lt;JV /&gt;</div>
+            <p>Designed & Built by <span>Jaligama Vivek</span> © 2025</p>
+            <div class="footer-socials">
+                <a href="mailto:vivekgupta5a58@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/jaligama-vivek-guptha-6665262b9/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Jaligamavivek" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
         </div>
     </footer>
 
