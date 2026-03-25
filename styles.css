@@ -86,7 +86,7 @@ img { max-width: 100%; }
 .profile-ring { position: absolute; inset: -15px; border-radius: 50%; border: 2px solid transparent; background: var(--gradient) border-box; -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); -webkit-mask-composite: destination-out; mask-composite: exclude; animation: spin 8s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .profile-img { width: 340px; height: 340px; border-radius: 50%; overflow: hidden; border: 4px solid var(--card); }
-.profile-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.profile-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
 .profile-badge { position: absolute; width: 50px; height: 50px; border-radius: 12px; background: var(--card); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; box-shadow: 0 8px 20px rgba(0,0,0,0.3); animation: float 3s ease-in-out infinite; }
 .badge-1 { top: 0; right: -10px; color: #f7df1e; animation-delay: 0s; }
 .badge-2 { bottom: 20px; right: -20px; color: #68a063; animation-delay: 0.5s; }
