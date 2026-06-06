@@ -102,8 +102,21 @@ document.querySelectorAll('.edu-card, .timeline-card, .project-card, .cert-card,
 async function fetchGithubRepos() {
     const container = document.getElementById('githubRepos');
     if (!container) return;
+
+    // Show skeleton while loading
+    container.innerHTML = Array(3).fill(`
+        <div class="repo-card" style="opacity:0.5;pointer-events:none;">
+            <div class="repo-header"><i class="fab fa-github repo-icon"></i><h4 style="background:var(--border);height:14px;width:120px;border-radius:4px;"></h4></div>
+            <p style="background:var(--border);height:10px;border-radius:4px;margin-bottom:4px;"></p>
+            <p style="background:var(--border);height:10px;width:60%;border-radius:4px;"></p>
+        </div>
+    `).join('');
+
     try {
-        const res = await fetch('https://api.github.com/users/Jaligamavivek/repos?sort=updated&per_page=6');
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 6000);
+        const res = await fetch('https://api.github.com/users/Jaligamavivek/repos?sort=updated&per_page=6', { signal: controller.signal });
+        clearTimeout(timeout);
         if (!res.ok) throw new Error('Failed');
         const repos = await res.json();
         if (!repos.length) {
